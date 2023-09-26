@@ -5,7 +5,7 @@ let check = true;
 
 let savollar = [
   {
-    savol:"Futbol jamoasi qaysi?",
+    savol:"Bulardan qaysi futbol jamoasi?",
     javoblar:["Ronaldo","Real Madrid","Venera","Toshkent"],
     javob:"b"
   },
@@ -48,7 +48,7 @@ function testing(){
     }
   }
   let end = new Date();
-  let Time = ((end - start)/1000)
+  let Time = (Math.trunc((end - start)/100)/10)
 if (count == savollar.length) alert("siz hamma savolga to'g'ri javob berdingiz "+ `ketgan vaqt ${Time} soniya`)
 else if( count == 0) alert("siz birorota ham savolga to'g'ri javob bera olmadingiz"+ `ketgan vaqt ${Time} soniya`)
 else alert(`siz ${savollar.length} ta savoldan ${count}ta savolga to'g'ri javob berdingiz ketgan vaqt ${Time} soniya`)
