@@ -37,7 +37,7 @@ let savollar = [
 
 
 function testing(){
-  alert("test boshlanmoqda...")
+  alert("test ishash: <Enter>\n testdan chiqish: <exit>")
   let start = new Date(); 
   if (check){
     for (let i=0; i<savollar.length;i++){
@@ -51,7 +51,7 @@ function testing(){
   let Time = (Math.trunc((end - start)/100)/10)
 if (count == savollar.length) alert("siz hamma savolga to'g'ri javob berdingiz "+ `ketgan vaqt ${Time} soniya`)
 else if( count == 0) alert("siz birorota ham savolga to'g'ri javob bera olmadingiz"+ `ketgan vaqt ${Time} soniya`)
-else alert(`siz ${savollar.length} ta savoldan ${count}ta savolga to'g'ri javob berdingiz\n  ketgan vaqt: ${Time} soniya`)
+else alert(`siz ${savollar.length} ta savoldan ${count}ta savolga to'g'ri javob berdingiz\nketgan vaqt: ${Time} soniya`)
 }
 
 
