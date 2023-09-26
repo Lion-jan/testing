@@ -60,6 +60,6 @@ let login = prompt("1=> Talabalar uchun \n 2=> O'qituvchi uchun")
 
 switch (login){
   case "1": testing(); break;
-  case "2": console.log("bu joy hali ishlamayapti ");break;
+  case "2": alert("bu joy hali ishlamayapti ");break;
 }
 
