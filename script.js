@@ -59,6 +59,7 @@ function Students() {
 // bu joyda o'qituvchilar  bo'limini ishlatishda foydalanilgan kodlar saqlanadi 
 
 function teachers() {
+
   let name = "Sherxon"
   let password = "venera"
   let check_login = false;
@@ -78,53 +79,29 @@ function teachers() {
 // bu joyda ustozlar uchun savol almashtirish funksiyasi qo'shiladi
 
 
-function addTest(){
-  newSavol = prompt("savolingizni kiriting")
-  varA = prompt(" A variantni kiriting ")
-  varB = prompt(" B variantni kiriting ")
-  varC = prompt(" C variantni kiriting ")
-  varD = prompt(" D variantni kiriting ")
-  answer = prompt( `siz tuzgan savol\n${savol}\na)${varA}\nb)${varB}\nc)${varC} \n)${varD}`);
-  savollar.push({
-    savol: `${newSavol}`,
-    javoblar:[varA,varB,varC,varD]
-  })
+
+let login = prompt("1=> Talabalar uchun \n 2=> O'qituvchilar  uchun")
+
+switch (login) {
+  case "1": Students(); break;
+
+
+
+  case "2": teachers(),
+    room = prompt("kerakli bo'limni tanlang\n1=>savollarni ko'rish\n2=>sozlamalar");
+    switch (room) {
+      case "1": alert("savollaringiz console oynada chiqarildi"), console.log(JSON.stringify(savollar,null,2)); break;
+      case "2": settings = prompt("kerakli bo'limni tanlang\n1=>Nomni o'zgartirish\n2=>Parolni almashtirish")
+        switch (settings) {
+          case "1": name = prompt("yangi nom kiriting"),teachers();
+          case "2": alert("bu joyda parol almashtiruvchi funksiya yoziladi")
+          case _: alert("siz hato bo'limni tanldingiz")
+        }
+        break;
+      case _: alert("siz hato bo'limni kiritdingiz"); break;
+    }
+    ; break;
 }
 
-addTest();
 
-console.log(savollar.length)
-
-
-
-
-
-
-
-
-
-// let login = prompt("1=> Talabalar uchun \n 2=> O'qituvchi uchun")
-
-// switch (login) {
-//   case "1": Students(); break;
-
-
-
-//   case "2": teachers(),
-//     room = prompt("kerakli bo'limni tanlang\n1=>savollarni ko'rish\n2=>sozlamalar");
-//     switch (room) {
-//       case "1": alert("savollaringiz console oynada chiqarildi"), console.log(JSON.stringify(savollar,null,2)); break;
-//       case "2": settings = prompt("kerakli bo'limni tanlang\n1=>Name ni almashtirish\n2=>Parolni almashtirish")
-//         switch (settings) {
-//           case "1": alert("bu joyda name almashtiruvchi funksiya yoziladi")
-//           case "2": alert("bu joyda parol almashtiruvchi funksiya yoziladi")
-//           case _: alert("siz hato bo'limni tanldingiz")
-//         }
-//         break;
-//       case _: alert("siz hato bo'limni kiritdingiz"); break;
-//     }
-//     ; break;
-// }
-
-
-
+  
