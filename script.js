@@ -75,16 +75,56 @@ function teachers() {
 
 }
 
+// bu joyda ustozlar uchun savol almashtirish funksiyasi qo'shiladi
 
 
-
-
-let login = prompt("1=> Talabalar uchun \n 2=> O'qituvchi uchun")
-
-switch (login) {
-  case "1": Students(); break;
-  case "2": teachers(),
-    room = prompt("kerakli bo'limni tanlang\n1=>savollarni ko'rish");
-    ; break;
+function addTest(){
+  newSavol = prompt("savolingizni kiriting")
+  varA = prompt(" A variantni kiriting ")
+  varB = prompt(" B variantni kiriting ")
+  varC = prompt(" C variantni kiriting ")
+  varD = prompt(" D variantni kiriting ")
+  answer = prompt( `siz tuzgan savol\n${savol}\na)${varA}\nb)${varB}\nc)${varC} \n)${varD}`);
+  savollar.push({
+    savol: `${newSavol}`,
+    javoblar:[varA,varB,varC,varD]
+  })
 }
+
+addTest();
+
+console.log(savollar.length)
+
+
+
+
+
+
+
+
+
+// let login = prompt("1=> Talabalar uchun \n 2=> O'qituvchi uchun")
+
+// switch (login) {
+//   case "1": Students(); break;
+
+
+
+//   case "2": teachers(),
+//     room = prompt("kerakli bo'limni tanlang\n1=>savollarni ko'rish\n2=>sozlamalar");
+//     switch (room) {
+//       case "1": alert("savollaringiz console oynada chiqarildi"), console.log(JSON.stringify(savollar,null,2)); break;
+//       case "2": settings = prompt("kerakli bo'limni tanlang\n1=>Name ni almashtirish\n2=>Parolni almashtirish")
+//         switch (settings) {
+//           case "1": alert("bu joyda name almashtiruvchi funksiya yoziladi")
+//           case "2": alert("bu joyda parol almashtiruvchi funksiya yoziladi")
+//           case _: alert("siz hato bo'limni tanldingiz")
+//         }
+//         break;
+//       case _: alert("siz hato bo'limni kiritdingiz"); break;
+//     }
+//     ; break;
+// }
+
+
 
